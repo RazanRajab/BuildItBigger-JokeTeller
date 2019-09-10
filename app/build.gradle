@@ -51,5 +51,6 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     implementation project(":MyJokesSource")
     implementation project(":displayjokeslibrary")
+    implementation project(":backend")
 
 }
