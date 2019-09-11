@@ -33,6 +33,7 @@ android {
     }
 }
 
+
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     endpointsServer project(path: ':backend', configuration: 'endpoints')
@@ -51,5 +52,4 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     implementation project(":MyJokesSource")
     implementation project(":displayjokeslibrary")
-    implementation project(":backend")
 }

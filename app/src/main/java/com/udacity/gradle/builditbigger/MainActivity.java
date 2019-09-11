@@ -5,13 +5,8 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import com.example.displayjokeslibrary.JokeActivity;
-import com.example.myjokessource.JokesSource;
-
 
 public class MainActivity extends AppCompatActivity {
 
@@ -46,11 +41,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void tellJoke(View view)
     {
-        Intent intent = new Intent(this, JokeActivity.class);
-        JokesSource jokeSource = new JokesSource();
-        String joke = jokeSource.getJoke();
-        intent.putExtra(JokeActivity.JOKE_KEY, joke);
-        startActivity(intent);
+        EndpointsAsyncTask endpointsAsyncTask= new EndpointsAsyncTask();
+        endpointsAsyncTask.execute(this);
     }
 
 
